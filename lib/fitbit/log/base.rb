@@ -17,7 +17,7 @@ module Fitbit::Log
       make_export_dir
 
       File.open(export_path, 'w') do |f|
-        f.puts(json)
+        f.puts(JSON.pretty_generate(row_data))
       end
     end
 
