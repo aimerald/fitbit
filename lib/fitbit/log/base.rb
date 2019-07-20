@@ -71,11 +71,11 @@ module Fitbit::Log
       end
 
       def access_token
-        ENV['ACCESS_TOKEN']
+        ENV.fetch('ACCESS_TOKEN')
       end
 
       def user_id
-        ENV['USER_ID']
+        ENV.fetch('USER_ID')
       end
 
       def api_version
